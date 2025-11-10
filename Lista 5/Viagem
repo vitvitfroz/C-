@@ -1,0 +1,27 @@
+using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("1 - Morros (R$120)");
+        Console.WriteLine("2 - Barreirinhas (R$200)");
+        Console.WriteLine("3 - Bacabeira (R$50)");
+        Console.WriteLine("4 - Rosário (R$80)");
+        Console.Write("Código do destino: ");
+        int cod = int.Parse(Console.ReadLine());
+
+        Console.Write("Compra ida e volta (S/N)? ");
+        string resp = Console.ReadLine().ToUpper();
+
+        double valor = 0;
+
+        if (cod == 1) valor = 120;
+        else if (cod == 2) valor = 200;
+        else if (cod == 3) valor = 50;
+        else if (cod == 4) valor = 80;
+
+        if (resp == "S")
+            valor *= 0.90; // 10% de desconto
+
+        Console.WriteLine("Valor final: R$ " + valor.ToString("F2"));
+    }
+}
