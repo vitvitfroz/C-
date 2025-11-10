@@ -1,0 +1,18 @@
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Informe o valor da glicose: ");
+        double g = double.Parse(Console.ReadLine());
+
+        if (g <= 100) {
+            Console.WriteLine("Classificação: NORMAL");
+		}
+        else if (g <= 140) {
+            Console.WriteLine("Classificação: ELEVADO");
+		}
+        else {
+            Console.WriteLine("Classificação: DIABETES");
+		}
+    }
+}
